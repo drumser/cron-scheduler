@@ -2,7 +2,7 @@
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
+The package can be installed
 by adding `cron_scheduler` to your list of dependencies in `mix.exs`:
 
 ```elixir
