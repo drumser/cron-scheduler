@@ -14,5 +14,5 @@ end
 ```
 
 Source code can be found at [Github](https://github.com/drumser/cron-scheduler)
-and documentation at [https://hexdocs.pm/cron_scheduler](https://hexdocs.pm/cron_scheduler).
+and documentation at [https://hexdocs.pm/cron_scheduler](https://hexdocs.pm/cron_scheduler/).
 
