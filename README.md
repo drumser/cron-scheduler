@@ -24,7 +24,7 @@ end
             [
               [
                 {"*/3 * * * *", fn -> IO.puts("execute */3 * * * *") end},
-                {"* * * * *", fn -> IO.puts("execute * * * * *") end}
+                {"* * * * *", Module, :func}
               ]
             ]}
       }
