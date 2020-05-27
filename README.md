@@ -8,29 +8,19 @@ by adding `cron_scheduler` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:cron_scheduler, "~> 0.1.0"}
+    {:cron_scheduler, "~> 0.2.0"}
   ]
 end
 ```
 
 ## Usage
 ```elixir
-  Supervisor.init(
-    [
-      %{
-        id: CronScheduler,
-        start:
-          {CronScheduler, :start_link,
-            [
-              [
-                {"*/3 * * * *", fn -> IO.puts("execute */3 * * * *") end},
-                {"* * * * *", Module, :func}
-              ]
-            ]}
-      }
-    ],
-    strategy: :one_for_one
-  )
+CronScheduler.Server.start_link([
+  {
+    {"* * * * *", fn -> IO.puts("execute * * * * *") end},
+    {"* * * * *", {Module, :func_name, []}}
+  }
+])
 ```
 
 Source code can be found at [Github](https://github.com/drumser/cron-scheduler)
